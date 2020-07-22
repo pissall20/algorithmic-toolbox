@@ -1,7 +1,4 @@
-#Uses python3
 
-import sys
-from pprint import pprint
 
 def lcs3(a, b, c):
     matrix = [[[0 for i in range(len(c)+1)] for j in range(len(b)+1)] for k in range(len(a)+1)]
@@ -24,17 +21,4 @@ if __name__ == '__main__':
         data = list(map(int, input().split()))
         strings.append(data)
 
-    # input = sys.stdin.read()
-    # data = list(map(int, input.split()))
-    # an = data[0]
-    # data = data[1:]
-    # a = data[:an]
-    # data = data[an:]
-    # bn = data[0]
-    # data = data[1:]
-    # b = data[:bn]
-    # data = data[bn:]
-    # cn = data[0]
-    # data = data[1:]
-    # c = data[:cn]
     print(lcs3(*strings))
